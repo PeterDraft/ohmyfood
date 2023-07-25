@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
 
@@ -81,7 +82,7 @@ h3{
 display: flex;
 gap: 7px;
 flex-wrap: wrap;
-@media (max-width 767px){
+@media (max-width: 767px){
     flex-direction: column;
 }
 }
@@ -107,3 +108,111 @@ flex-wrap: wrap;
     background-color: #9356DC;
     
 }
+
+/*menus*/
+
+.menus{
+    background-color: #f6f6f6;
+}
+    h2 {
+        margin-bottom: 20px;
+    }
+   
+.menus-card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) ;
+    gap: 20px;
+
+    @media (max-width: 767px){
+        grid-template-columns: repeat(1, 1fr) ;
+        
+    }
+
+    .new{
+        position: relative;
+    }
+    .new::before {
+        content:"New";
+        position: absolute;
+        height: 25px;
+        width: 65px;
+        background-color: #99E2D0;
+        color: darken(#99E2D0, $amount: 45%);
+        display: grid;
+        place-items: center;
+        right: 20px;
+        top: 25px;
+    }
+   
+}    
+
+.card{
+    & .card-image{
+        border-radius: 25px 25px 0px 0px;
+        height: 160px;
+        background-size: cover;
+    }
+    & .card-image-1{
+        background-image: url("../image/menu-1.jpg");
+    }
+    & .card-image-2{
+        background-image: url("../image/menu-2.jpg");
+    }
+    & .card-image-3{
+        background-image: url("../image/menu-3.jpg");
+    }
+    & .card-image-4{
+        background-image: url("../image/menu-4.jpg");
+    }
+
+    & .card-explain{
+        position: relative;
+        h4 {margin: 10px;
+          /* text-decoration: none;*/
+        }
+        p {margin: 10px}
+        i {
+            font-size: 25px;
+            position: absolute;
+            right:20px ;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .fa-solid {
+            color: transparent;
+            background-clip: text;
+            background-image: linear-gradient(to top,rgba(153, 67, 273, 1),#e433b5e6);
+            -webkit-background-clip: text;
+            opacity: 0;
+            transition: all 210ms ease-in-out;
+        }
+        &:hover .fa-solid{
+            opacity: 1;
+            transform: translateY(-50%) scale(1,3);
+            
+        }
+        
+    }
+
+      
+
+}
+   
+        
+        
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
